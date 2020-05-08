@@ -596,7 +596,7 @@ void setup()
       try 
       {
         println("Get serial port no: "+getSerialPortNumber());
-        portName = serialPorts[getSerialPortNumber()];
+        portName = serialPorts[getSerialPortNumber()-1];
         myPort = new Serial(this, portName, getBaudRate());
         //read bytes into a buffer until you get a linefeed (ASCII 10):
         myPort.bufferUntil('\n');
